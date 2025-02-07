@@ -1,6 +1,8 @@
 <script>
   
-  fetch('/api/hello').then(res => console.log('succeeded', res), err => console.error('failed', err));
+  fetch('/api/hello')
+    .then(res => res.text())
+    .then(res => console.log('succeeded', res), err => console.error('failed', err));
 
 </script>
 
